@@ -1,0 +1,164 @@
+.article {
+  h1,
+  h2,
+  h3 {
+    margin-block: 16px;
+  }
+
+  h4,
+  h5 {
+    margin-block: 8px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-weight: bolder;
+      font-size: 60px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 34px;
+    }
+    h3 {
+      font-size: 28px;
+      margin: 30px 0;
+    }
+    h4 {
+      font-weight: bold;
+      font-size: 24px;
+      margin: 15px 0;
+    }
+    h5 {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 15px 0;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-weight: bolder;
+      font-size: 48px;
+      margin-bottom: 15px;
+    }
+    h2 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+    h3 {
+      font-size: 24px;
+      margin: 30px 0;
+    }
+    h4 {
+      font-weight: bold;
+      font-size: 20px;
+      margin: 15px 0;
+    }
+    h5 {
+      font-weight: bold;
+      font-size: 18px;
+      margin: 15px 0;
+    }
+  }
+
+  a {
+    color: #717fda;
+    line-height: 1;
+
+    &:hover {
+      border-bottom: 1px solid #717fda;
+    }
+  }
+
+  ol,
+  ul {
+    margin-block: 1em;
+    padding-inline-start: 20px;
+    line-height: 2;
+
+    li {
+      line-height: 2;
+
+      &:has(ol) {
+        list-style-type: decimal;
+      }
+      &:has(ul) {
+        list-style-type: disc;
+      }
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+  }
+
+  ol li {
+    list-style-type: decimal;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 2;
+  }
+
+  u {
+    font-size: 1.2rem;
+    text-decoration: none;
+    border-bottom: 3px solid var(--secondaryTwo);
+    padding-bottom: 2px;
+  }
+
+  code {
+    margin: 1rem 0;
+    padding: 3px;
+    background-color: var(--gray900);
+    color: var(--gray000);
+    overflow-x: auto;
+  }
+
+  hr {
+    border-top: 1.5px solid var(--baseTwo);
+    margin-block: 2.5rem;
+  }
+
+  blockquote {
+    position: relative;
+    padding: 1rem 1rem 1rem 3rem;
+    margin: 1rem 0;
+    box-sizing: border-box;
+    font-style: italic;
+    color: var(--baseTwo);
+    background: var(--secondaryOne);
+    border: solid 3px var(--primaryOne);
+
+    &::before {
+      display: inline-block;
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      content: '“';
+      font-family: sans-serif;
+      color: var(--primaryOne);
+      font-size: 4rem;
+      line-height: 1;
+    }
+
+    p {
+      padding: 0;
+      margin: 10px 0;
+      line-height: 1.7;
+    }
+
+    cite {
+      display: block;
+      text-align: right;
+      color: var(--baseTwo);
+      font-size: 0.9em;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

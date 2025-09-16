@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Gray Palette */
+    --gray000: #f4f4f4;
+    --gray100: #cbcbcb;
+    --gray300: #aaaaaa;
+    --gray500: #767676;
+    --gray700: #444444;
+    --gray800: #2f2f2f;
+    --gray900: #1c1c1c;
+
+    /* Primary Palette */
+    --primary000: #fdece3;
+    --primary100: #ffcdae;
+    --primary300: #ffab77;
+    --primary500: #bc6d58;
+
+    /* Secondary Palette */
+    --secondary000: #ffe2e4;
+    --secondary100: #ffb6bc;
+    --secondary300: #ff737e;
+    --secondary900: #4b1620;
+
+    /* Default Theme (light mode fallback) */
+    --baseZero: var(--gray900);
+    --baseOne: var(--gray000);
+    --baseTwo: var(--gray500);
+
+    --primaryOne: var(--primary100);
+    --secondaryOne: var(--secondary000);
+    --secondaryTwo: var(--secondary100);
+  }
+
+  /* Explicit Dark Mode (class-based) */
+  :root.dark {
+    --baseZero: var(--gray000);
+    --baseOne: var(--gray800);
+    --baseTwo: var(--gray300);
+
+    --primaryOne: var(--primary500);
+    --secondaryOne: var(--secondary900);
+    --secondaryTwo: var(--secondary300);
+  }
+
+  /* Explicit Light Mode (class-based) */
+  :root.light {
+    --baseZero: var(--gray900);
+    --baseOne: var(--gray000);
+    --baseTwo: var(--gray500);
+
+    --primaryOne: var(--primary100);
+    --secondaryOne: var(--secondary000);
+    --secondaryTwo: var(--secondary100);
+  }
+
+  /* Auto-detect dark mode if no explicit class */
+  @media (prefers-color-scheme: dark) {
+    :root:not(.light) {
+      --baseZero: var(--gray000);
+      --baseOne: var(--gray800);
+      --baseTwo: var(--gray300);
+
+      --primaryOne: var(--primary500);
+      --secondaryOne: var(--secondary900);
+      --secondaryTwo: var(--secondary300);
+    }
+  }
+}
+
+/* Global Resets */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Responsive Layout Helpers */
+@media (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .burger {
+    display: none;
+  }
+}
+
+/* Utility Classes for article details */
+.custom_highlight {
+  background-color: var(--secondaryTwo);
+  color: var(--gray900);
+}
+
+.custom_underline {
+  border-bottom: 3px solid var(--primaryOne);
+}
+
+.filename {
+  margin-top: 5px;
+  padding: 5px;
+  background: var(--gray700);
+  color: var(--gray000);
+}

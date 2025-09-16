@@ -1,0 +1,126 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: 10;
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-family: var(--font-reggae);
+    user-select: none;
+    z-index: inherit;
+    border-radius: 50%;
+    appearance: none;
+    filter: drop-shadow(0 0 5rem var(--primaryOne));
+
+    h1 {
+      appearance: none;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 1;
+      font-size: 7vw;
+      line-height: 1;
+      cursor: default;
+
+      span {
+        animation: bounce 3s infinite;
+        filter: drop-shadow(0 0 5rem var(--primaryOne));
+        letter-spacing: 0.2vw;
+      }
+
+      div > span {
+        font-family: var(--font-ranchers);
+        transition: all 0.3s ease-out;
+
+        &:hover {
+          color: transparent;
+          background-clip: text;
+          background-image: linear-gradient(
+            var(--primaryOne),
+            var(--primaryOne),
+            var(--secondaryTwo)
+          );
+          display: inline-block;
+          animation: rubberband 0.8s ease-out;
+        }
+      }
+    }
+  }
+
+  .scroller {
+    z-index: inherit;
+    position: absolute;
+    bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .circleContainer {
+      width: 35px;
+      height: 64px;
+      border-radius: 0.5rem;
+      border-width: 4px;
+      border-color: var(--baseZero);
+      display: flex;
+      align-items: start;
+      padding: 0.5rem;
+
+      .circle {
+        width: 0.75rem;
+        height: 0.75rem;
+        background-color: var(--baseZero);
+        border-radius: 30%;
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+}
+
+@keyframes rubberband {
+  0% {
+    transform: scaleX(1);
+  }
+  40% {
+    transform: scaleX(1.12) scaleY(0.75);
+  }
+  55% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  65% {
+    transform: scaleX(1.09) scaleY(0.85);
+  }
+  75% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+  90% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}

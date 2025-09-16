@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "name": "avatar-animation",
+    "title": "Avatar Animation",
+    "summary": "Basic avatar animation example using R3F, Ready Player Me and Mixamo.",
+    "tags": ["TypeScript", "HTML", "React", "TailwindCSS"],
+    "image": "/project/avatar-animation.png",
+    "repoUrl": "https://github.com/meowmomo/avatar-animation",
+    "websiteUrl": "https://mm-avatar-animation.vercel.app/",
+    "date": "2024/05/05"
+  },
+  {
+    "id": 2,
+    "name": "book-log",
+    "title": "Book Log",
+    "summary": "An app for bookaholics to keep track of the books you have read and take notes.",
+    "tags": ["TypeScript", "CSS", "NextJS", "TailwindCSS"],
+    "image": "/project/book-log.png",
+    "repoUrl": "https://github.com/meowmomo/book-log",
+    "websiteUrl": "https://mm-book-log.vercel.app/",
+    "date": "2024/02/21"
+  },
+  {
+    "id": 3,
+    "name": "floating-rooms",
+    "title": "Floating Rooms",
+    "summary": "Floating Rooms 3D portfolio app using R3F and gsap.",
+    "tags": ["TypeScript", "HTML", "CSS", "React", "TailwindCSS"],
+    "image": "/project/floating-rooms.png",
+    "repoUrl": "https://github.com/meowmomo/floating-rooms",
+    "websiteUrl": "https://mm-floating-rooms.vercel.app/",
+    "date": "2024/10/16"
+  },
+  {
+    "id": 4,
+    "name": "calc-me",
+    "title": "Calculator",
+    "summary": "A basic calculator.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "image": "/project/calc-me.png",
+    "repoUrl": "https://github.com/meowmomo/calc-me",
+    "websiteUrl": "https://meowmomo.github.io/calc-me/",
+    "date": "2022/04/25"
+  },
+  {
+    "id": 5,
+    "name": "dev-camp",
+    "title": "Dev Camp",
+    "summary": "A static dev bootcamp landing webpage.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "image": "/project/dev-camp.png",
+    "repoUrl": "https://github.com/meowmomo/dev-camp",
+    "websiteUrl": "https://meowmomo.github.io/dev-camp/",
+    "date": "2022/08/08"
+  },
+  {
+    "id": 6,
+    "name": "rock-paper-scissors",
+    "title": "Rock Paper Scissors",
+    "summary": "Simple rock, paper, scissors game with computer as an opponent.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "image": "/project/rock-paper-scissors.png",
+    "repoUrl": "https://github.com/meowmomo/rock-paper-scissors",
+    "websiteUrl": "https://meowmomo.github.io/rock-paper-scissors/",
+    "date": "2023/01/29"
+  },
+  {
+    "id": 7,
+    "name": "ticking-room",
+    "title": "Ticking Room",
+    "summary": "An animated room with a dynamic day-to-night transition and vice versa. The scene shifts gradually between daytime and nighttime, featuring smooth lighting changes, atmospheric and simple sound effects to enhance the experience.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "image": "/project/ticking-room.png",
+    "repoUrl": "https://github.com/meowmomo/ticking-room",
+    "websiteUrl": "https://meowmomo.github.io/ticking-room/",
+    "date": "2021/12/09"
+  },
+  {
+    "id": 8,
+    "name": "ganvas",
+    "title": "Ganvas",
+    "summary": "A fun and interactive sketching app.",
+    "tags": ["HTML", "CSS", "JavaScript"],
+    "image": "/project/ganvas.png",
+    "repoUrl": "https://github.com/meowmomo/ganvas",
+    "websiteUrl": "https://meowmomo.github.io/ganvas/",
+    "date": "2023/11/13"
+  },
+  {
+    "id": 9,
+    "name": "figma-kio-hot-sauce",
+    "title": "Kio Hot Sauce",
+    "summary": "Focused on a mobile version high fidelity design of an ecommerce store.",
+    "tags": ["Figma"],
+    "image": "/project/figma-kio-hot-sauce.png",
+    "repoUrl": "https://www.figma.com/design/EHyy8qGkh2HBku430le870/Kio-Hot-Sauce-Ecom-V1?node-id=195-456&t=OaaAfsERhCVtonDT-1",
+    "websiteUrl": "https://www.figma.com/proto/EHyy8qGkh2HBku430le870/Kio-Hot-Sauce-Ecom-V1?page-id=111%3A135&node-id=131-142&p=f&viewport=501%2C1543%2C0.41&t=dbALHiyfQgKIQSMd-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=131%3A142&show-proto-sidebar=1",
+    "date": "2025/08/17"
+  }
+]
