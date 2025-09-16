@@ -8,6 +8,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from 'next-themes';
+import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
 
 const GA_TAG_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 
@@ -94,6 +95,7 @@ export default function RootLayout({
           </MantineProvider>
 
           <GoogleAnalytics gaId={GA_TAG_ID} />
+          <VercelAnalytics />
         </ThemeProvider>
       </body>
     </html>
