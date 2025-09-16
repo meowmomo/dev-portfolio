@@ -161,7 +161,7 @@ Hi, I’m momo – a developer passionate about:
 
 👉 This portfolio reflects how I approach building real-world, professional-quality apps.
 
-🌐 Portfolio: [meowmomo.vercel.app](https://meowmomo.vercel.app/home)
+🌐 Portfolio: [meowmomo.vercel.app](https://meowmomo.vercel.app)
 
 💻 GitHub: [@meowmomo](https://github.com/meowmomo)
 
