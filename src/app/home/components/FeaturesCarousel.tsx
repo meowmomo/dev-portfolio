@@ -6,7 +6,7 @@ import { useRef } from 'react';
 import Autoplay from 'embla-carousel-autoplay';
 import { Carousel } from '@mantine/carousel';
 import { Text } from '@mantine/core';
-import classes from '@/styles/FeaturesCarousel.module.css';
+import classes from '@/styles/FeaturesCarousel.module.scss';
 import { useQuery } from '@/hooks/useQuery';
 import { PiDevices } from 'react-icons/pi';
 import { CgTimer } from 'react-icons/cg';

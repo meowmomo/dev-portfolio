@@ -1,5 +1,5 @@
 import '@mantine/core/styles.css';
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 import type { Metadata } from 'next';
 import React from 'react';
 import { Ranchers, Reggae_One, Wix_Madefor_Display } from 'next/font/google';

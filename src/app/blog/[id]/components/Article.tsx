@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import classes from '@/styles/Article.module.css';
+import classes from '@/styles/Article.module.scss';
 import FormatDate from '@/components/FormatDate';
 import * as cheerio from 'cheerio';
 import hljs from 'highlight.js';
