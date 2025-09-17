@@ -28,8 +28,18 @@ export default function ProjectCard({
             <SiGithub size={28} className="text-baseZero hover:text-secondary300" />
           </Link>
         ) : (
-          <Link href={repoUrl} rel="noopener noreferrer" target="_blank">
-            <MyIcons iconName="Info" />
+          <Link
+            href={repoUrl}
+            rel="noopener noreferrer"
+            target="_blank"
+            className="group inline-flex items-center"
+          >
+            <span className="block group-hover:hidden">
+              <MyIcons iconName="Info" />
+            </span>
+            <span className="hidden group-hover:block">
+              <MyIcons iconName="InfoHover" />
+            </span>
           </Link>
         )}
         <FormatDate dateString={date} />

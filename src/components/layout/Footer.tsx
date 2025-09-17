@@ -57,10 +57,10 @@ export default function Footer() {
 
         <Group className="gap-2">
           <Link href="https://github.com/meowmomo" rel="noopener noreferrer" target="_blank">
-            <SiGithub size={28} className="text-baseZero hover:secondaryTwo" />
+            <SiGithub size={28} className="text-baseZero hover:text-secondary300" />
           </Link>
           <Link href="mailto:modularmanul@gmail.com">
-            <IoMdMail size={28} className="text-baseZero hover:secondaryTwo" />
+            <IoMdMail size={28} className="text-baseZero hover:text-secondary300" />
           </Link>
         </Group>
       </div>

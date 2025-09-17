@@ -1,13 +1,18 @@
+import { useId } from 'react';
+
 export const HashtagIcon = () => {
+  const id = useId();
+  const patternId = `${id}-pattern`;
+  const imageId = `${id}-image`;
   return (
-    <svg width="20" height="20" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect width="96" height="96" fill="url(#pattern0_67_92)" />
+    <svg width="20" height="20" viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
+      <rect width="96" height="96" fill={`url(#${patternId})`} />
       <defs>
-        <pattern id="pattern0_67_92" patternContentUnits="objectBoundingBox" width="1" height="1">
-          <use href="#image0_67_92" transform="scale(0.0104167)" />
+        <pattern id={patternId} patternContentUnits="objectBoundingBox" width="1" height="1">
+          <use href={`#${imageId}`} transform="scale(0.0104167)" />
         </pattern>
         <image
-          id="image0_67_92"
+          id={imageId}
           width="96"
           height="96"
           preserveAspectRatio="none"

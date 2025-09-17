@@ -12,7 +12,7 @@ import {
   CameraControls,
   OrbitControls,
   Stars,
-  Sky as SkyImpl,
+  Sky as SkyBg,
   StatsGl,
 } from '@react-three/drei';
 import { Suspense } from 'react';
@@ -47,7 +47,7 @@ function LightSky() {
   });
   return (
     <>
-      <SkyImpl />
+      <SkyBg />
       <group ref={ref}>
         <Clouds material={THREE.MeshLambertMaterial} limit={400}>
           <Cloud ref={cloud0} {...config} bounds={[x, y, z]} color={color} />

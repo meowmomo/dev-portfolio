@@ -1,8 +1,12 @@
+import { useId } from 'react';
+
 export const TypeScriptIcon = () => {
+  const id = useId();
+  const gradientId = `${id}-gradient`;
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48">
       <linearGradient
-        id="O2zipXlwzZyOse8_3L2yya_wpZmKzk11AzJ_gr1"
+        id={gradientId}
         x1="15.189"
         x2="32.276"
         y1="-.208"
@@ -12,13 +16,7 @@ export const TypeScriptIcon = () => {
         <stop offset="0" stopColor="#2aa4f4"></stop>
         <stop offset="1" stopColor="#007ad9"></stop>
       </linearGradient>
-      <rect
-        width="36"
-        height="36"
-        x="6"
-        y="6"
-        fill="url(#O2zipXlwzZyOse8_3L2yya_wpZmKzk11AzJ_gr1)"
-      ></rect>
+      <rect width="36" height="36" x="6" y="6" fill={`url(#${gradientId})`}></rect>
       <polygon
         fill="#fff"
         points="27.49,22 14.227,22 14.227,25.264 18.984,25.264 18.984,40 22.753,40 22.753,25.264 27.49,25.264"

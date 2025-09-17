@@ -1,8 +1,12 @@
+import { useId } from 'react';
+
 export const CSSIcon = () => {
+  const id = useId();
+  const gradientId = `${id}-gradient`;
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 48 48">
       <linearGradient
-        id="TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1"
+        id={gradientId}
         x1="16.33"
         x2="32.293"
         y1="-2.748"
@@ -13,7 +17,7 @@ export const CSSIcon = () => {
         <stop offset="1" stopColor="#007ad9"></stop>
       </linearGradient>
       <path
-        fill="url(#TQDriqswrKwPOniLrPT12a_7gdY5qNXaKC0_gr1)"
+        fill={`url(#${gradientId})`}
         d="M7.192,7.176l2.627,29.77c0.109,1.237,0.97,2.28,2.164,2.621l10.643,3.041	c0.898,0.257,1.849,0.257,2.747,0l10.643-3.041c1.194-0.341,2.055-1.383,2.164-2.621l2.627-29.77C40.911,6.006,39.99,5,38.816,5	H9.184C8.01,5,7.089,6.006,7.192,7.176z"
       ></path>
       <path
