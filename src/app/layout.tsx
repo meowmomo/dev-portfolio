@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     description:
       'Explore Momo’s portfolio – full-stack web development, UI/UX design, and blog posts about coding & design.',
     siteName: 'Momo Portfolio',
-    // url: 'https://meowmomo.vercel.app/og-image.png',
+    url: 'https://meowmomo.vercel.app',
     images: [
       {
         url: 'https://meowmomo.vercel.app/og-image-landscape.png',
@@ -71,6 +71,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
     title: 'Momo | Portfolio & Blog',
