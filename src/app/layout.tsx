@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     title: 'Momo | Portfolio & Blog',
     description:
       'Explore Momo’s portfolio – full-stack web development, UI/UX design, and blog posts about coding & design.',
-    url: 'https://meowmomo.vercel.app',
+    url: 'https://meowmomo.vercel.app/og-image.png',
     siteName: 'Momo Portfolio',
     images: [
       {
@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     title: 'Momo | Portfolio & Blog',
     description:
       'Full-stack developer portfolio featuring projects, UI/UX design, and technical articles.',
-    images: ['/og-image.png'],
+    images: ['https://meowmomo.vercel.app/og-image.png'],
     // creator: '@your_twitter_handle', // optional but recommended
   },
 };
