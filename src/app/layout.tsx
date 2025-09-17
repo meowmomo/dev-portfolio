@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     // url: 'https://meowmomo.vercel.app/og-image.png',
     images: [
       {
-        url: '/og-image-landscape.png',
+        url: 'https://meowmomo.vercel.app/og-image-landscape.png',
         width: 1200,
         height: 630,
         alt: 'Main Portfolio Preview',
       },
       {
-        url: '/og-image-square.png',
+        url: 'https://meowmomo.vercel.app/og-image-square.png',
         width: 1080,
         height: 1080,
         alt: 'Alternative Portfolio Preview',
@@ -76,7 +76,10 @@ export const metadata: Metadata = {
     title: 'Momo | Portfolio & Blog',
     description:
       'Full-stack developer portfolio featuring projects, UI/UX design, and technical articles.',
-    images: ['/og-image-landscape.png', '/og-image-square.png'],
+    images: [
+      'https://meowmomo.vercel.app/og-image-landscape.png',
+      'https://meowmomo.vercel.app/og-image-square.png',
+    ],
     // creator: '@your_twitter_handle', // optional but recommended
   },
 };
