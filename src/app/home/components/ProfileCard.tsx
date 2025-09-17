@@ -8,10 +8,11 @@ import { LuCoffee } from 'react-icons/lu';
 
 export default function ProfileCard() {
   const bio = [
-    `Hello, I'm momo, just a peach trying to be a part of this huge tech world. `,
-    `3 words to describe me; caffeine addict, gym rat & bookaholic. I am also on a fitness journey (discipline is self-love ~ new identity in the making). Oh I'm also a huge cat person (that includes cat snakes aka ferrets).`,
-    `While I am currently employed, I constantly seek opportunities for self-improvement in my personal time. Please feel free to contact me for job opportunities or collaborative projects. `,
+    `Hi, I'm Momo — a full-stack developer passionate about building clean, scalable, and user-friendly applications.`,
+    `Outside of coding, you’ll probably find me lifting at the gym, reading a good book, or enjoying way too much coffee. I’m also a big fan of cats (and ferrets, a.k.a. “cat snakes”).`,
+    `I’m currently employed but always open to new challenges, learning opportunities, and collaborations. Feel free to reach out if you’d like to connect or work together!`,
   ];
+
   return (
     <Card
       shadow="xl"
@@ -38,7 +39,7 @@ export default function ProfileCard() {
         <Text className="text-center text-baseZero text-2xl font-ranchers tracking-wide font-bold mt-2">
           momo
         </Text>
-        <Text className="text-center text-lg text-baseTwo italic">Web Designer & Developer</Text>
+        <Text className="text-center text-lg text-baseTwo italic">Full Stack Web Developer</Text>
         <Group className="flex items-center text-baseTwo mb-2">
           <IoLocationOutline size={20} />
           <Text>JPN</Text>
@@ -51,7 +52,7 @@ export default function ProfileCard() {
       </div>
       <div className="flex items-center justify-between mt-4 flex-wrap gap-2">
         <Group wrap="nowrap" gap={10} mt={5}>
-          <Link href="https://github.com/meowmomo">
+          <Link href="https://github.com/meowmomo" rel="noopener noreferrer" target="_blank">
             <SiGithub size={28} className="text-baseZero hover:text-secondary300" />
           </Link>
           <Link href="mailto:example@gmail.com">
@@ -60,6 +61,7 @@ export default function ProfileCard() {
         </Group>
         <Link
           href="https://buymeacoffee.com/meowmomo"
+          rel="noopener noreferrer"
           target="_blank"
           className="flex gap-2 items-center justify-end"
         >
