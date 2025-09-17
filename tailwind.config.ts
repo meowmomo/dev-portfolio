@@ -29,6 +29,12 @@ const config: Config = {
       '10': '72px',
     },
     extend: {
+      fontSize: {
+        '7xl': ['5rem', { lineHeight: '1.1' }], // default max is 6xl
+        '8xl': ['6rem', { lineHeight: '1.1' }],
+        '9xl': ['7rem', { lineHeight: '1.1' }],
+        '10xl': ['8rem', { lineHeight: '1.1' }],
+      },
       colors: {
         /* Gray Palette */
         gray000: 'var(--gray000)',

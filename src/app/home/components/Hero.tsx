@@ -178,7 +178,7 @@ function HeroText() {
   return (
     <LazyMotion features={domAnimation} strict>
       <m.h1
-        className="text-6xl sm:text-7xl md:text-8xl font-bold text-center"
+        className="font-bold text-center"
         variants={container}
         initial="hidden"
         whileInView="visible"
@@ -187,7 +187,7 @@ function HeroText() {
         <m.span className="block mb-2 text-6xl font-medium" variants={child}>
           Hi, I&apos;m
         </m.span>
-        <div className="flex gap-1 justify-center">
+        <div className="flex gap-1 justify-center text-8xl md:text-10xl">
           {name.map((char, index) => (
             <m.span key={index} variants={child} className="inline-block">
               {char}
@@ -240,7 +240,7 @@ export default function Hero() {
         <h1
           className="flex flex-col font-gray900 leading-snug 
                  text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 
-                 leading-relaxed gap-4 mt-8"
+                 leading-relaxed gap-4 mt-2 md:mt-8"
         >
           A peachie&apos;s road to
           <br />
@@ -253,11 +253,10 @@ export default function Hero() {
           >
             DEV GURU
           </Text>
+          <Text className="max-w-[248px] md:max-w-[382px] lg:max-w-full text-base sm:text-lg md:text-xl lg:text-xl font-bold">
+            Gather knowledge on web development, design, tips and tricks.
+          </Text>
         </h1>
-
-        <Text className="text-base sm:text-lg md:text-xl lg:text-xl font-bold">
-          Gain insights on web development, design, debugging and tooltips.
-        </Text>
       </Container>
     </div>
   );
