@@ -56,7 +56,7 @@ export default function Footer() {
         </Group>
 
         <Group className="gap-2">
-          <Link href="https://github.com/meowmomo">
+          <Link href="https://github.com/meowmomo" rel="noopener noreferrer" target="_blank">
             <SiGithub size={28} className="text-baseZero hover:secondaryTwo" />
           </Link>
           <Link href="mailto:modularmanul@gmail.com">
