@@ -15,28 +15,21 @@ const GA_TAG_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 export const metadata: Metadata = {
   title: 'Momo | Portfolio & Blog',
   description:
-    'Welcome to Momo’s portfolio – showcasing full-stack web development projects, UI/UX design, and technical articles. Explore my work with Next.js, React, TypeScript, Tailwind CSS, and more.',
+    'Full-stack developer portfolio showcasing web development projects, UI/UX design, and technical articles. Built with Next.js, React, and TypeScript.',
   keywords: [
     'portfolio',
     'software engineer',
+    'full stack developer',
     'front-end developer',
     'back-end developer',
-    'full stack developer',
-    'web developer',
-    'UI/UX design',
     'React developer',
     'Next.js',
     'TypeScript',
     'JavaScript',
     'Tailwind CSS',
-    'SCSS',
-    'Python',
-    'Django',
-    'GitHub',
+    'UI/UX design',
     'open source',
     'programming blog',
-    'developer tips',
-    'debugging',
     'coding projects',
     'tech portfolio',
   ],
@@ -58,26 +51,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Momo | Portfolio & Blog',
     description:
-      'Explore Momo’s work in web development and design. Projects built with Next.js, React, TypeScript, and more.',
+      'Explore Momo’s portfolio – full-stack web development, UI/UX design, and blog posts about coding & design.',
     url: 'https://meowmomo.vercel.app',
     siteName: 'Momo Portfolio',
     images: [
       {
-        url: '/og-image.png',
-        width: 1200,
-        height: 630,
+        url: '/og-image.png', // 1200x630 or 1080x1080 image
+        width: 1080,
+        height: 1080,
         alt: 'Momo Portfolio Preview',
       },
     ],
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Momo | Portfolio & Blog',
     description:
-      'Full-stack developer portfolio featuring projects, blogs, and open-source contributions.',
+      'Full-stack developer portfolio featuring projects, UI/UX design, and technical articles.',
     images: ['/og-image.png'],
-    creator: '@your_twitter_handle',
+    // creator: '@your_twitter_handle', // optional but recommended
   },
 };
 
