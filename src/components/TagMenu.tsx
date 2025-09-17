@@ -1,9 +1,12 @@
 'use client';
 
-import { Text } from '@mantine/core';
+import { useState } from 'react';
+import { Text, ActionIcon } from '@mantine/core';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { TbChevronDown, TbChevronUp } from 'react-icons/tb';
 import MyIcons from '@/components/MyIcons';
+import { motion, AnimatePresence } from 'framer-motion';
 
 type TagMenuProps = {
   tags: string[];
@@ -12,67 +15,121 @@ type TagMenuProps = {
 };
 
 export default function TagMenu({ tags, basePath, lang = '' }: TagMenuProps) {
+  const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const isTagged = () => pathname !== `/${basePath}`;
+  const currentTag = (() => {
+    const match = pathname.match(/\/tags\/([^/?]+)/);
+    return match ? decodeURIComponent(match[1]) : null;
+  })();
 
   const handleUrl = (tag?: string) => {
     const params = new URLSearchParams(searchParams.toString());
-
-    if (lang) {
-      params.set('lang', lang);
-    } else {
-      params.delete('lang');
-    }
-
-    if (tag) {
-      return `/${basePath}/tags/${encodeURIComponent(tag)}?${params.toString()}`;
-    }
-
-    return `/${basePath}?${params.toString()}`;
+    lang ? params.set('lang', lang) : params.delete('lang');
+    return tag
+      ? `/${basePath}/tags/${encodeURIComponent(tag)}?${params.toString()}`
+      : `/${basePath}?${params.toString()}`;
   };
 
-  const isActive = (tag: string) => {
-    const encoded = encodeURIComponent(tag);
-    return pathname.includes(`/tags/${encoded}`);
-  };
+  const isActive = (tag: string) => pathname.includes(`/tags/${encodeURIComponent(tag)}`);
 
   return (
-    <div className="bg-baseOne mx-auto min-w-max max-w-fit h-fit shadow-xl dark:shadow-lg dark:shadow-gray900">
-      <ul className="mx-2 p-4">
-        {/* TAGS header */}
+    <div className="bg-baseOne mx-auto mb-4 min-w-[240px] max-w-fit h-fit rounded-2xl shadow-xl dark:shadow-lg dark:shadow-gray900">
+      {/* Mobile Header */}
+      <div className="flex items-center justify-between px-2 py-2 md:hidden">
+        <Text className="text-lg font-semibold text-baseZero">
+          {currentTag ? `Filter: ${currentTag}` : 'Filter: All'}
+        </Text>
+        <ActionIcon
+          variant="subtle"
+          onClick={() => setOpen(!open)}
+          aria-label="Toggle tag menu"
+          className="rounded-full hover:bg-secondaryOne"
+        >
+          {open ? (
+            <TbChevronUp className="text-baseZero" size={20} />
+          ) : (
+            <TbChevronDown className="text-baseZero" size={20} />
+          )}
+        </ActionIcon>
+      </div>
+
+      {/* Desktop tag list */}
+      <ul className="hidden md:block px-2 py-2 space-y-2">
         <li className="flex items-center justify-center">
-          <Link
-            href={handleUrl()}
-            className={`flex gap-2 w-full justify-center mb-2 ${
-              isTagged() ? 'border-b-2 border-primaryOne dark:border-none' : ''
-            }`}
-          >
+          <Link href={handleUrl()}>
             <Text
-              className={`text-xl font-reggae font-semibold text-baseZero ${isTagged() ? 'dark:text-primaryOne' : ''}`}
+              className={`text-lg font-semibold cursor-pointer ${
+                !currentTag ? 'text-primaryOne' : 'text-baseZero'
+              }`}
             >
-              TAGS
+              Show All
             </Text>
           </Link>
         </li>
-
-        {/* Individual tags */}
         {tags.map((tag, id) => (
           <li key={id}>
             <Link href={handleUrl(tag)}>
               <p
-                className={`flex text-sm text-baseZero items-center gap-4 my-1 ${basePath == 'blog' ? '' : 'justify-between'} hover:bg-secondaryOne ${
-                  isActive(tag) ? 'bg-primaryOne text-gray900' : ''
+                className={`flex items-center gap-3 text-sm px-1 py-1 rounded-lg transition ${
+                  isActive(tag)
+                    ? 'bg-primaryOne text-gray900 font-semibold'
+                    : 'hover:bg-secondaryOne text-baseZero'
                 }`}
               >
-                {basePath == 'blog' ? <MyIcons iconName="Hashtag" /> : <MyIcons iconName={tag} />}
+                {basePath === 'blog' ? <MyIcons iconName="Hashtag" /> : <MyIcons iconName={tag} />}
                 {tag}
               </p>
             </Link>
           </li>
         ))}
       </ul>
+
+      {/* Mobile dropdown */}
+      <AnimatePresence>
+        {open && (
+          <motion.ul
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.25 }}
+            className="block md:hidden px-2 py-2 space-y-2 border-t border-gray300 dark:border-gray700"
+          >
+            <li className="flex items-center justify-center">
+              <Link href={handleUrl()}>
+                <Text
+                  className={`text-base font-semibold cursor-pointer ${
+                    !currentTag ? 'text-primaryOne' : 'text-baseZero'
+                  }`}
+                >
+                  Show All
+                </Text>
+              </Link>
+            </li>
+            {tags.map((tag, id) => (
+              <li key={id}>
+                <Link href={handleUrl(tag)}>
+                  <p
+                    className={`flex items-center gap-3 text-sm px-1 py-1 rounded-lg transition ${
+                      isActive(tag)
+                        ? 'bg-primaryOne text-gray900 font-semibold'
+                        : 'hover:bg-secondaryOne text-baseZero'
+                    }`}
+                  >
+                    {basePath === 'blog' ? (
+                      <MyIcons iconName="Hashtag" />
+                    ) : (
+                      <MyIcons iconName={tag} />
+                    )}
+                    {tag}
+                  </p>
+                </Link>
+              </li>
+            ))}
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
