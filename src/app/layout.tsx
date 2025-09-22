@@ -9,6 +9,7 @@ import Footer from '@/components/layout/Footer';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import { ThemeProvider } from 'next-themes';
 import { Analytics as VercelAnalytics } from '@vercel/analytics/next';
+import { LevaProviders } from '@/components/LevaProviders';
 
 const GA_TAG_ID = process.env.NEXT_PUBLIC_GA_ID || '';
 
@@ -114,14 +115,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeProvider attribute="class">
           <MantineProvider
             theme={{
-              /** Disable Mantine color system */
-              primaryColor: undefined,
+              primaryColor: undefined /** Disable Mantine color system */,
               colors: {},
             }}
           >
             <Header />
             <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
-              <main className="flex-grow pt-[100px]">{children}</main>
+              <main className="flex-grow pt-[100px]">
+                {children}
+                <LevaProviders />
+              </main>
             </div>
             <Footer />
           </MantineProvider>

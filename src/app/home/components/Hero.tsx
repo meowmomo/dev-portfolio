@@ -1,6 +1,6 @@
 'use client';
 
-import { Text, Container, useMantineColorScheme } from '@mantine/core';
+import { Text, Container } from '@mantine/core';
 import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 import { Group } from 'three';
@@ -16,26 +16,33 @@ import {
   StatsGl,
 } from '@react-three/drei';
 import { Suspense } from 'react';
-import { useControls } from 'leva';
+import { useControls, Leva } from 'leva';
 import { m, LazyMotion, domAnimation, Variants } from 'framer-motion';
 import styles from '@/styles/hero.module.scss';
+import { useTheme } from 'next-themes';
 
 function LightSky() {
   const ref = useRef<THREE.Group>(null);
   const cloud0 = useRef<THREE.Group>(null);
-  const { color, x, y, z, ...config } = useControls({
-    seed: { value: 1, min: 1, max: 100, step: 1 },
-    segments: { value: 20, min: 1, max: 80, step: 1 },
-    volume: { value: 6, min: 0, max: 100, step: 0.1 },
-    opacity: { value: 0.8, min: 0, max: 1, step: 0.01 },
-    fade: { value: 10, min: 0, max: 400, step: 1 },
-    growth: { value: 4, min: 0, max: 20, step: 1 },
-    speed: { value: 0.1, min: 0, max: 1, step: 0.01 },
-    x: { value: 6, min: 0, max: 100, step: 1 },
-    y: { value: 1, min: 0, max: 100, step: 1 },
-    z: { value: 1, min: 0, max: 100, step: 1 },
-    color: 'white',
-  });
+  const { color, x, y, z, ...config } = useControls(
+    {
+      seed: { value: 1, min: 1, max: 100, step: 1 },
+      segments: { value: 20, min: 1, max: 80, step: 1 },
+      volume: { value: 6, min: 0, max: 100, step: 0.1 },
+      opacity: { value: 0.8, min: 0, max: 1, step: 0.01 },
+      fade: { value: 10, min: 0, max: 400, step: 1 },
+      growth: { value: 4, min: 0, max: 20, step: 1 },
+      speed: { value: 0.1, min: 0, max: 1, step: 0.01 },
+      x: { value: 6, min: 0, max: 100, step: 1 },
+      y: { value: 1, min: 0, max: 100, step: 1 },
+      z: { value: 1, min: 0, max: 100, step: 1 },
+      color: 'white',
+    },
+    {
+      collapsed: true, // collapse by default
+    },
+  );
+
   useFrame((state, delta) => {
     if (ref.current) {
       ref.current.rotation.y = Math.cos(state.clock.elapsedTime / 2) / 2;
@@ -105,7 +112,9 @@ function DarkSky() {
   const ref = useRef<Group>(null!);
 
   useFrame(() => {
-    ref.current.rotation.y -= 0.0003;
+    if (ref.current) {
+      ref.current.rotation.y -= 0.0003;
+    }
   });
 
   return (
@@ -222,8 +231,8 @@ function HeroScroller() {
 }
 
 export default function Hero() {
-  const { colorScheme } = useMantineColorScheme();
-  const isDark = colorScheme === 'dark';
+  const { resolvedTheme, setTheme } = useTheme();
+  const isDark = resolvedTheme === 'dark';
 
   return (
     <div className="flex flex-col justify-center items-center dark:bg-baseOne w-screen h-screen max-w-full -mt-[100px]">

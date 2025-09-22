@@ -9,22 +9,23 @@ import { useTheme } from 'next-themes';
 
 export default function ModeSwitch() {
   const [mounted, setMounted] = useState(false);
-  const { setColorScheme, clearColorScheme } = useMantineColorScheme();
+  // const { colorScheme, setColorScheme, clearColorScheme } = useMantineColorScheme();
   const { resolvedTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
-    setColorScheme(resolvedTheme as MantineColorScheme);
+    // setColorScheme(resolvedTheme as MantineColorScheme);
+    // }, [resolvedTheme]);
   }, []);
 
   const setLight = () => {
     setTheme('light');
     // clearColorScheme();
-    setColorScheme('light');
+    // setColorScheme('light');
   };
   const setDark = () => {
     setTheme('dark');
-    setColorScheme('dark');
+    // setColorScheme('dark');
   };
   if (!mounted) {
     return null;
