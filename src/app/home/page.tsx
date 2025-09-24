@@ -84,7 +84,7 @@ export default function Home() {
               </li>
               <li>
                 <span className="font-bold">Front End Developer</span> – Information Technology
-                Service & Consulting Company (2025–Current)
+                Service & Consulting Company (2025 - Present)
               </li>
             </ul>
           </Card>
