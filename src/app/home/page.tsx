@@ -68,23 +68,19 @@ export default function Home() {
             <ul className="space-y-3 list-disc list-inside">
               <li>
                 <span className="font-bold">Studied Japanese</span> – Tokyo Waseda Foreign Language
-                School (2018–2020)
+                School (2018 - 2020)
               </li>
               <li>
                 <span className="font-bold">Graduated</span> – Tokyo Information Creator College
-                (2020–2022)
-              </li>
-              <li>
-                <span className="font-bold">Programmer</span> – Aviation & Spatial Information
-                Company (2022–2024)
+                (2020 - 2022)
               </li>
               <li>
                 <span className="font-bold">Back End Developer</span> – Geographic & Spatial
-                Information Company (2024–2025)
+                Information Services System Development (2022 - 2024)
               </li>
               <li>
-                <span className="font-bold">Front End Developer</span> – Information Technology
-                Service & Consulting Company (2025 - Present)
+                <span className="font-bold">Front End Developer</span> – Mobile & Internet Services
+                System Development (2024 - Present)
               </li>
             </ul>
           </Card>
