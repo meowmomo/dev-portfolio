@@ -14,6 +14,7 @@ import { FigmaIcon } from '@/icons/FigmaIcon';
 import { NodeJSIcon } from '@/icons/NodeJSIcon';
 import { InfoIcon, InfoIconHover } from '@/icons/InfoIcon';
 import { HashtagIcon } from '@/icons/HashtagIcon';
+import { MongoDBIcon } from '@/icons/MongoDBIcon';
 
 const iconMap: Record<string, React.ComponentType> = {
   HTML: HTMLIcon,
@@ -33,6 +34,7 @@ const iconMap: Record<string, React.ComponentType> = {
   Info: InfoIcon,
   InfoHover: InfoIconHover,
   Hashtag: HashtagIcon,
+  MongoDB: MongoDBIcon,
 };
 
 export default function MyIcons({ iconName }: { iconName: string }) {
