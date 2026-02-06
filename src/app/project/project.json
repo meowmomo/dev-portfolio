@@ -97,5 +97,16 @@
     "repoUrl": "https://www.figma.com/design/EHyy8qGkh2HBku430le870/Kio-Hot-Sauce-Ecom-V1?node-id=195-456&t=OaaAfsERhCVtonDT-1",
     "websiteUrl": "https://www.figma.com/proto/EHyy8qGkh2HBku430le870/Kio-Hot-Sauce-Ecom-V1?page-id=111%3A135&node-id=131-142&p=f&viewport=501%2C1543%2C0.41&t=dbALHiyfQgKIQSMd-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=131%3A142&show-proto-sidebar=1",
     "date": "2025/08/17"
+  },
+  {
+    "id": 10,
+    "name": "art-portfolio",
+    "title": "Art Portfolio",
+    "summary": "An art gallery showcase website of an artist.",
+    "tags": ["TypeScript", "React", "NextJS", "MongoDB"],
+    "image": "/project/art-portfolio.png",
+    "repoUrl": "https://github.com/meowmomo/art-portfolio",
+    "websiteUrl": "https://momoart.vercel.app/",
+    "date": "2026/02/06"
   }
 ]

@@ -11,6 +11,7 @@ export const ProjectTag = [
   'Python',
   'Django',
   'Figma',
+  'MongoDB',
 ];
 
 export type ProjectTagType = (typeof ProjectTag)[number];
