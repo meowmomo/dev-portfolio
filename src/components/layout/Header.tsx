@@ -50,8 +50,10 @@ export default function Header() {
         <Group className="flex-nowrap">
           {/* ✅ now toggles open/close */}
           <Burger opened={opened} onClick={toggle} size="sm" className="burger md:hidden" />
-          <Logo />
-          <h1 className="text-2xl font-ranchers tracking-wide">momo</h1>
+          <Link href="/home" className="flex justify-between items-center gap-4">
+            <Logo />
+            <h1 className="text-2xl font-ranchers tracking-wide">momo</h1>
+          </Link>
         </Group>
 
         {/* Right side (desktop) */}
