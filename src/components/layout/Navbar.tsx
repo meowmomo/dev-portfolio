@@ -42,11 +42,13 @@ export default function Navbar({ setClose }: { setClose: Function }) {
     <div className="flex flex-col h-screen w-full justify-between text-baseZero">
       <nav>
         <Group className="pb-2 mb-2 justify-between">
-          <Group>
-            {/* <LogoLabel /> */}
-            <Logo />
-            <h1 className="text-2xl font-reggae">momo</h1>
-          </Group>
+          <Link href="/home">
+            <Group>
+              {/* <LogoLabel /> */}
+              <Logo />
+              <h1 className="text-2xl font-reggae">momo</h1>
+            </Group>
+          </Link>
         </Group>
         {items}
       </nav>
