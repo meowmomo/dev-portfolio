@@ -10,7 +10,6 @@ import { MicroCMSIcon } from '@/icons/MicroCMSIcon';
 import { SCSSIcon } from '@/icons/SCSSIcon';
 import { PythonIcon } from '@/icons/PythonIcon';
 import { DjangoIcon } from '@/icons/DjangoIcon';
-import { FigmaIcon } from '@/icons/FigmaIcon';
 import { NodeJSIcon } from '@/icons/NodeJSIcon';
 import { InfoIcon, InfoIconHover } from '@/icons/InfoIcon';
 import { HashtagIcon } from '@/icons/HashtagIcon';
@@ -30,7 +29,6 @@ const iconMap: Record<string, React.ComponentType> = {
   SCSS: SCSSIcon,
   Python: PythonIcon,
   Django: DjangoIcon,
-  Figma: FigmaIcon,
   Info: InfoIcon,
   InfoHover: InfoIconHover,
   Hashtag: HashtagIcon,

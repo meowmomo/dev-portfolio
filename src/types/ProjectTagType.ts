@@ -10,7 +10,6 @@ export const ProjectTag = [
   'NodeJS',
   'Python',
   'Django',
-  'Figma',
   'MongoDB',
 ];
 
